@@ -1,0 +1,142 @@
+{
+  "framework": "5G-Adaptive Lightweight Remote Attestation Framework",
+  "tier": 3,
+  "device": "HP Laptop Intel Core i5 10th Gen",
+  "mechanism": "TPM 2.0 PCR Quote + HKDF AK (Intel PTT)",
+  "tpm_info": {
+    "present": true,
+    "ready": true,
+    "enabled": true,
+    "manufacturer": "Intel PTT",
+    "version": "2.0",
+    "spec": "TCG TPM 2.0"
+  },
+  "timestamp": "2026-03-15T22:58:37.663228",
+  "experiments": {
+    "exp1_performance": {
+      "mMTC": {
+        "compute_ms": 11.57,
+        "cpu_pct": 2.2,
+        "mem_kb": 8.0,
+        "evidence_bytes": 366,
+        "verdict": "TRUSTED",
+        "pcr_index": 7
+      },
+      "eMBB": {
+        "compute_ms": 22.35,
+        "cpu_pct": 4.0,
+        "mem_kb": 14804.0,
+        "evidence_bytes": 366,
+        "verdict": "TRUSTED",
+        "pcr_index": 8
+      },
+      "URLLC": {
+        "compute_ms": 15.85,
+        "cpu_pct": 4.7,
+        "mem_kb": 0,
+        "evidence_bytes": 366,
+        "verdict": "SUSPICIOUS",
+        "pcr_index": 11
+      }
+    },
+    "exp2_frequency": [
+      {
+        "label": "Boot-only",
+        "avg_ms": 0.07,
+        "avg_cpu": 11.1,
+        "detect_lat": 0.07
+      },
+      {
+        "label": "Every 5min",
+        "avg_ms": 0.22,
+        "avg_cpu": 14.63,
+        "detect_lat": 0.66
+      },
+      {
+        "label": "Every 1min",
+        "avg_ms": 0.15,
+        "avg_cpu": 13.9,
+        "detect_lat": 1.5
+      },
+      {
+        "label": "Event-triggered",
+        "avg_ms": 0.2,
+        "avg_cpu": 30.2,
+        "detect_lat": 4.0
+      }
+    ],
+    "exp3_scalability": [
+      {
+        "n": 1,
+        "throughput": 607.78,
+        "avg_lat": 1.6
+      },
+      {
+        "n": 2,
+        "throughput": 678.36,
+        "avg_lat": 1.5
+      },
+      {
+        "n": 3,
+        "throughput": 706.43,
+        "avg_lat": 1.4
+      },
+      {
+        "n": 5,
+        "throughput": 562.63,
+        "avg_lat": 1.8
+      },
+      {
+        "n": 8,
+        "throughput": 573.08,
+        "avg_lat": 1.7
+      },
+      {
+        "n": 10,
+        "throughput": 610.66,
+        "avg_lat": 1.6
+      }
+    ],
+    "exp4a_replay": {
+      "detected": true,
+      "reason": "PCR extended_value changed after firmware modification"
+    },
+    "exp4b_partial": {
+      "detected": false
+    },
+    "exp5_mobility": {
+      "cloud_ms": 22.95,
+      "mec_ms": 36.47,
+      "ret_ms": 18.71
+    },
+    "exp6_hierarchical": {
+      "ind_time": 21.76,
+      "ind_bytes": 3660,
+      "agg_time": 3.91,
+      "agg_bytes": 366,
+      "saving_pct": 90.0
+    },
+    "exp7_interoperability": {
+      "mMTC": {
+        "schema_valid": true,
+        "failed_fields": []
+      },
+      "eMBB": {
+        "schema_valid": true,
+        "failed_fields": []
+      },
+      "URLLC": {
+        "schema_valid": true,
+        "failed_fields": []
+      }
+    },
+    "exp_d2d": {
+      "mutual_ok": false,
+      "B_trusts_A": true,
+      "A_trusts_B": false,
+      "tok_B_verdict": "SUSPICIOUS",
+      "tok_A_verdict": "TRUSTED",
+      "cross_tier": "TrustZone_Tier2 <-> TPM2_Tier3"
+    }
+  }
+}

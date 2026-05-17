@@ -1,0 +1,157 @@
+{
+  "framework": "5G-Adaptive Lightweight Remote Attestation Framework",
+  "tier": 1,
+  "device": "Arduino Uno R3",
+  "verifier": "HP Laptop MEC Node",
+  "timestamp": "2026-03-15T20:31:42.384091",
+  "experiments": {
+    "exp1_performance": {
+      "mMTC": {
+        "compute_ms": 1260,
+        "compute_us": 1260300,
+        "wall_ms": 2578.02,
+        "cpu_pct": 32.47,
+        "mem_kb": 3372.0,
+        "evidence_bytes": 242,
+        "verdict": "COMPROMISED",
+        "group_attest": true
+      },
+      "eMBB": {
+        "compute_ms": 1164,
+        "compute_us": 1164792,
+        "wall_ms": 2083.89,
+        "cpu_pct": 29.71,
+        "mem_kb": 0,
+        "evidence_bytes": 242,
+        "verdict": "COMPROMISED",
+        "group_attest": false
+      },
+      "URLLC": {
+        "compute_ms": 1193,
+        "compute_us": 1193432,
+        "wall_ms": 2127.74,
+        "cpu_pct": 32.45,
+        "mem_kb": 0,
+        "evidence_bytes": 242,
+        "verdict": "COMPROMISED",
+        "group_attest": false
+      }
+    },
+    "exp2_frequency": [
+      {
+        "label": "Boot-only",
+        "n": 1,
+        "avg_ms": 1327.0,
+        "avg_cpu": 36.75,
+        "detect_lat": 1327.0
+      },
+      {
+        "label": "Every 5min",
+        "n": 3,
+        "avg_ms": 0,
+        "avg_cpu": 0,
+        "detect_lat": 0
+      },
+      {
+        "label": "Every 1min",
+        "n": 10,
+        "avg_ms": 0,
+        "avg_cpu": 0,
+        "detect_lat": 0
+      },
+      {
+        "label": "Event-triggered",
+        "n": 20,
+        "avg_ms": 0,
+        "avg_cpu": 0,
+        "detect_lat": 0
+      }
+    ],
+    "exp3_scalability": [
+      {
+        "n": 1,
+        "success": 1,
+        "throughput": 0.44,
+        "avg_lat": 2265.6
+      },
+      {
+        "n": 2,
+        "success": 1,
+        "throughput": 0.67,
+        "avg_lat": 1501.4
+      },
+      {
+        "n": 3,
+        "success": 3,
+        "throughput": 1.31,
+        "avg_lat": 762.8
+      },
+      {
+        "n": 5,
+        "success": 2,
+        "throughput": 0.54,
+        "avg_lat": 1867.3
+      },
+      {
+        "n": 8,
+        "success": 6,
+        "throughput": 1.0,
+        "avg_lat": 1003.3
+      },
+      {
+        "n": 10,
+        "success": 8,
+        "throughput": 1.06,
+        "avg_lat": 943.2
+      }
+    ],
+    "exp4a_replay": {
+      "detected": true,
+      "reason": "CDI_1 changed after firmware modification"
+    },
+    "exp4b_partial": {
+      "detected": false
+    },
+    "exp5_mobility": {
+      "cloud": {
+        "ms": 2054.09
+      },
+      "mec": {
+        "ms": 2275.2
+      },
+      "return": {
+        "ms": 2272.07
+      }
+    },
+    "exp6_hierarchical": {
+      "ind_time": 5275.51,
+      "ind_bytes": 726,
+      "grp_time": 2264.31,
+      "grp_bytes": 242,
+      "saving_pct": 66.7
+    },
+    "exp7_interoperability": {
+      "mMTC": {
+        "schema_valid": true,
+        "failed_fields": []
+      },
+      "eMBB": {
+        "schema_valid": true,
+        "failed_fields": []
+      },
+      "URLLC": {
+        "schema_valid": true,
+        "failed_fields": []
+      }
+    }
+  },
+  "graphs": [
+    "C:\\Users\\HP\\OneDrive\\Desktop\\Rahaf\\ZU\\Thesis\\Tier 1\\tier1_5g_attestation\\graphs\\exp1_compute_time.png",
+    "C:\\Users\\HP\\OneDrive\\Desktop\\Rahaf\\ZU\\Thesis\\Tier 1\\tier1_5g_attestation\\graphs\\exp1_cpu_overhead.png",
+    "C:\\Users\\HP\\OneDrive\\Desktop\\Rahaf\\ZU\\Thesis\\Tier 1\\tier1_5g_attestation\\graphs\\exp1_evidence_size.png",
+    "C:\\Users\\HP\\OneDrive\\Desktop\\Rahaf\\ZU\\Thesis\\Tier 1\\tier1_5g_attestation\\graphs\\exp2_frequency_overhead.png",
+    "C:\\Users\\HP\\OneDrive\\Desktop\\Rahaf\\ZU\\Thesis\\Tier 1\\tier1_5g_attestation\\graphs\\exp3_scalability.png",
+    "C:\\Users\\HP\\OneDrive\\Desktop\\Rahaf\\ZU\\Thesis\\Tier 1\\tier1_5g_attestation\\graphs\\exp5_mobility_latency.png",
+    "C:\\Users\\HP\\OneDrive\\Desktop\\Rahaf\\ZU\\Thesis\\Tier 1\\tier1_5g_attestation\\graphs\\exp6_hierarchical.png"
+  ]
+}
